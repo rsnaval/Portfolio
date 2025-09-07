@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube - Naval07</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Naval07</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#youtube">YouTube</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- YouTube Page -->
+    <section id="youtube-full">
+        <h1>All YouTube Videos</h1>
+        <div class="youtube-container" id="youtube-full-container">
+            <!-- YouTube videos will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Naval07. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Dynamically load all YouTube videos
+        const fullYoutubeContainer = document.getElementById('youtube-full-container');
+        youtubeVideos.forEach(video => {
+            const card = document.createElement('div');
+            card.classList.add('youtube-card');
+            card.innerHTML = `<img src="${video.thumbnail}" alt="${video.title}">
+                              <h3>${video.title}</h3>
+                              <p>${video.description}</p>`;
+            fullYoutubeContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+/* General Reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 5%;
+    background:#222;
+    color:#fff;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+header .logo {
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.nav-links {
+    list-style:none;
+    display:flex;
+}
+
+.nav-links li{
+    margin-left:2rem;
+}
+
+.nav-links li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links li a:hover{
+    color:#f39c12;
+}
+
+/* Hamburger */
+.burger{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+}
+
+.burger div{
+    width:25px;
+    height:3px;
+    background:#fff;
+    margin:4px;
+}
+
+/* Hero */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    padding:5%;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color:#fff;
+    min-height:80vh;
+    align-items:center;
+}
+
+.hero-left{
+    width:60%;
+    font-size:1rem;
+}
+
+.hero-right{
+    width:35%;
+    font-size:3rem;
+    font-weight:bold;
+    text-align:right;
+}
+
+/* Sections */
+section{
+    padding:5% 5%;
+}
+
+h2, h1{
+    text-align:center;
+    color:#f39c12;
+    margin-bottom:2rem;
+}
+
+/* Buttons */
+.btn{
+    display:inline-block;
+    padding:0.7rem 1.5rem;
+    background:#f39c12;
+    color:#fff;
+    text-decoration:none;
+    border-radius:5px;
+    margin-top:1rem;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#e67e22;
+}
+
+/* Blog & YouTube Containers */
+.blog-container, .youtube-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:1.5rem;
+}
+
+.blog-card, .youtube-card{
+    background:#f4f4f4;
+    padding:1rem;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.blog-card:hover, .youtube-card:hover{
+    transform:translateY(-10px);
+}
+
+.blog-card button{
+    margin-top:0.5rem;
+    padding:0.5rem 1rem;
+    background:#f39c12;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.blog-card button:hover{
+    background:#e67e22;
+}
+
+/* Contact Section */
+#contact p a{
+    color:#f39c12;
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:1rem;
+}
+
+/* Admin Panel */
+#admin {
+    padding:5%;
+    background:#f9f9f9;
+}
+
+.admin-container{
+    margin-bottom:2rem;
+    padding:1rem;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.admin-container h3{
+    margin-bottom:1rem;
+}
+
+.admin-container input, 
+.admin-container textarea{
+    width:100%;
+    padding:0.8rem;
+    margin-bottom:0.5rem;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.admin-container button{
+    padding:0.7rem 1.5rem;
+    background:#f39c12;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.admin-container button:hover{
+    background:#e67e22;
+}
+
+/* Admin Login Modal */
+.modal {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.8);
+    z-index:9999;
+}
+
+.modal-content {
+    background:#fff;
+    padding:2rem;
+    border-radius:10px;
+    width:300px;
+    text-align:center;
+}
+
+.modal-content input{
+    width:100%;
+    padding:0.8rem;
+    margin-bottom:1rem;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.modal-content button{
+    padding:0.7rem 1.5rem;
+    background:#f39c12;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.modal-content button:hover{
+    background:#e67e22;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:60px;
+        right:5%;
+        background:#222;
+        width:200px;
+        border-radius:5px;
+        padding:1rem;
+    }
+    .nav-links.active{
+        display:flex;
+    }
+    .burger{
+        display:flex;
+    }
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero-left, .hero-right{
+        width:100%;
+        text-align:center;
+    }
+}

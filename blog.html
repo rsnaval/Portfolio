@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Naval07</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Naval07</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#youtube">YouTube</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Page -->
+    <section id="blog-full">
+        <h1>All Blog Posts</h1>
+        <div class="blog-container" id="blog-full-container">
+            <!-- Blog posts will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Naval07. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Dynamically load all blog posts
+        const fullBlogContainer = document.getElementById('blog-full-container');
+        blogPosts.forEach(post => {
+            const card = document.createElement('div');
+            card.classList.add('blog-card');
+            card.innerHTML = `<h3>${post.title}</h3>
+                              <p>${post.full}</p>`;
+            fullBlogContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>
