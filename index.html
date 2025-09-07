@@ -1,110 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naval07 Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naval07 - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Admin Login Modal -->
-    <div id="admin-login-modal" class="modal">
-        <div class="modal-content">
-            <h2>Admin Login</h2>
-            <input type="text" id="admin-username" placeholder="Username">
-            <input type="password" id="admin-password" placeholder="Password">
-            <button onclick="loginAdmin()">Login</button>
-            <p id="login-error" style="color:red; display:none;">Invalid credentials!</p>
-        </div>
+  <!-- Header -->
+  <header>
+    <div class="logo">Naval07</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#youtube">YouTube</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p>500 words ka description yahan hoga jo aapke website ke bare me explain karega...</p>
     </div>
+    <div class="hero-title">
+      <h1>Naval07</h1>
+    </div>
+  </section>
 
-    <!-- Header / Navigation -->
-    <header>
-        <div class="logo">Naval07</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#youtube">YouTube</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </nav>
-    </header>
+  <!-- About -->
+  <section id="about">
+    <h2>About</h2>
+    <p>Thoda sa short description...</p>
+    <a href="about.html" class="btn">Read More</a>
+  </section>
 
-    <!-- Home / Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-left">
-            <p>
-                Welcome to Naval07! This is a modern, fully responsive portfolio website designed to showcase projects, blogs, and videos. Here you will find detailed descriptions of my work, professional achievements, and creative endeavors. The website is crafted to be visually appealing and easy to navigate. With responsive design and interactive features, visitors can explore content effortlessly on any device. Explore blogs, watch YouTube content, and learn more about my skills. This portfolio reflects my dedication to web development and content creation, providing a seamless user experience. Enjoy reading and browsing through carefully curated sections. The interface is clean, minimal, and user-friendly. Whether you are a potential client, collaborator, or enthusiast, you will find valuable insights here. Dynamic features are incorporated using JavaScript to enhance engagement and interaction. Stay updated with blogs and videos regularly. This platform also demonstrates my ability to design, implement, and manage content efficiently.
-            </p>
-        </div>
-        <div class="hero-right">
-            <h1>Naval07</h1>
-        </div>
-    </section>
+  <!-- Blog -->
+  <section id="blog">
+    <h2>Latest Blogs</h2>
+    <div class="blog-container" id="blog-container"></div>
+    <a href="blog.html" class="btn">More Blogs</a>
+  </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About</h2>
-        <p>
-            Naval07 is a creative portfolio website showcasing web development projects, blogs, and videos. Explore more by clicking the button below.
-        </p>
-        <a href="about.html" class="btn">Read More</a>
-    </section>
+  <!-- YouTube -->
+  <section id="youtube">
+    <h2>YouTube Videos</h2>
+    <div class="youtube-container" id="youtube-container"></div>
+    <a href="youtube.html" class="btn">More Videos</a>
+  </section>
 
-    <!-- Blog Section -->
-    <section id="blog">
-        <h2>Blog</h2>
-        <div class="blog-container" id="blog-container"></div>
-        <a href="blog.html" class="btn">More</a>
-    </section>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>500 words ka description yahan hoga...</p>
+    <p>Email: rsnaval@example.com</p>
+  </section>
 
-    <!-- YouTube Section -->
-    <section id="youtube">
-        <h2>YouTube</h2>
-        <div class="youtube-container" id="youtube-container"></div>
-        <a href="youtube.html" class="btn">More</a>
-    </section>
+  <!-- Admin Login Button -->
+  <div class="admin-login" style="text-align:center; margin:20px 0;">
+    <button onclick="openLogin()">Admin Login</button>
+  </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>
-            Contact Naval07 for collaborations, inquiries, or feedback. Email: <a href="mailto:naval07@example.com">naval07@example.com</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fusce ut placerat orci nulla pellentesque dignissim enim sit. Vivamus arcu felis bibendum ut tristique et egestas. Phasellus faucibus scelerisque eleifend donec pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor.
-        </p>
-    </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Naval07. All rights reserved.</p>
+  </footer>
 
-    <!-- Admin Panel -->
-    <section id="admin">
-        <h2>Admin Panel</h2>
-        <div class="admin-container">
-            <h3>Add Blog Post</h3>
-            <input type="text" id="blog-title" placeholder="Title">
-            <textarea id="blog-snippet" placeholder="Snippet"></textarea>
-            <textarea id="blog-full" placeholder="Full Content"></textarea>
-            <button onclick="addBlogPost()">Add Blog Post</button>
-        </div>
+  <!-- Login Modal -->
+  <div id="login-modal" class="login-modal">
+    <div class="login-content">
+      <span class="close" onclick="closeLogin()">&times;</span>
+      <h2>Admin Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <p id="login-error" style="color:red; display:none;">Invalid login!</p>
+    </div>
+  </div>
 
-        <div class="admin-container">
-            <h3>Add YouTube Video</h3>
-            <input type="text" id="video-title" placeholder="Title">
-            <input type="text" id="video-thumbnail" placeholder="Thumbnail URL">
-            <textarea id="video-description" placeholder="Short Description"></textarea>
-            <button onclick="addYouTubeVideo()">Add Video</button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Naval07. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
